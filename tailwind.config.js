@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         red: '#FC4747',
         'dark-blue': '#10141E',
-        'semi-dark-blue': '#161D2F',
+        'semidark-blue': '#161D2F',
         'grayish-blue': '#5A698F',
       },
       fontFamily: {
