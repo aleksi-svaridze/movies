@@ -20,10 +20,10 @@ function App() {
       
       <SideBar />
 
-        {/* Search Section */}
-        <div className="my-6 md:my-8 mx-4 md:mx-6">
-          <SearchComponent />
-        </div>
+      {/* Search Section */}
+      <div className="my-6 md:my-8 mx-4 md:mx-6">
+        <SearchComponent />
+      </div>
 
       {/* Routes */}
         <Routes>
