@@ -44,7 +44,7 @@ export const MobileHeader = () => {
     )
 }
 
-export const DesktopHeader = () => {
+export const SideBar = () => {
     return(
         <div 
             className='hidden rounded-[20px] bg-semidark-blue w-24 lg:flex flex-col items-center justify-between pt-9 pb-8' style={{minHeight: 'calc(100vh - 64px)'}}>
@@ -53,8 +53,8 @@ export const DesktopHeader = () => {
                 <div className='flex flex-col gap-y-10 items-center'>
                     <NavLink to={'/'} className="cursor-pointer size-5">
                     {
-                        ({isActive}) => (
-                            <MainMenuIconDesktop isActive={isActive} />
+                        ({isActive, isPending}) => (
+                            <MainMenuIconDesktop isActive={isActive} isPending={isPending} />
                         )
                     }
                     </NavLink>

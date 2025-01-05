@@ -47,11 +47,27 @@ export const MainMenuIcon = ({isActive}) => {
     )
 }
 
-// Desktop Size
-export const MainMenuIconDesktop = ({isActive}) => {    
+export const SearchIcon = () => {
     return(
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width='24' height='24' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.01" width='24' height='24' fill="black"/>
+            <path 
+                fillRule="evenodd" 
+                clipRule="evenodd" 
+                d="M17.31 15.9L20.71 19.29C20.8993 19.4778 21.0058 19.7334 21.0058 20C21.0058 20.2666 20.8993 20.5222 20.71 20.71C20.5222 20.8993 20.2666 21.0058 20 21.0058C19.7334 21.0058 19.4778 20.8993 19.29 20.71L15.9 17.31C14.5025 18.407 12.7767 19.0022 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19.0022 12.7767 18.407 14.5025 17.31 15.9ZM11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5Z" 
+                fill="white"
+            />
+        </svg>
+    )
+}
+
+// Desktop Size
+export const MainMenuIconDesktop = ({isActive}) => { 
+       
+    return(
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="fill-red" xmlns="http://www.w3.org/2000/svg">
             <path  
+                className="hover:fill-red"
                 fillRule="evenodd" 
                 clipRule="evenodd" 
                 d="M1 0H8C8.6 0 9 0.4 9 1V8C9 8.6 8.6 9 8 9H1C0.4 9 0 8.6 0 8V1C0 0.4 0.4 0 1 0ZM1 11H8C8.6 11 9 11.4 9 12V19C9 19.6 8.6 20 8 20H1C0.4 20 0 19.6 0 19V12C0 11.4 0.4 11 1 11ZM19 0H12C11.4 0 11 0.4 11 1V8C11 8.6 11.4 9 12 9H19C19.6 9 20 8.6 20 8V1C20 0.4 19.6 0 19 0ZM12 11H19C19.6 11 20 11.4 20 12V19C20 19.6 19.6 20 19 20H12C11.4 20 11 19.6 11 19V12C11 11.4 11.4 11 12 11Z" 
@@ -94,5 +110,19 @@ export const MoviesIconDesktop = ({isActive}) => {
                 fill={isActive ? "#fff" : "#5A698F"}
             />
         </svg>        
+    )
+}
+
+export const SearchIconDesktop = () => {
+    return(
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.01" width="32" height="32" fill="black"/>
+            <path 
+                fillRule="evenodd" 
+                clipRule="evenodd" 
+                d="M23.08 21.2L27.6133 25.72C27.8657 25.9704 28.0077 26.3111 28.0077 26.6667C28.0077 27.0222 27.8657 27.363 27.6133 27.6133C27.363 27.8657 27.0222 28.0077 26.6667 28.0077C26.3111 28.0077 25.9704 27.8657 25.72 27.6133L21.2 23.08C19.3366 24.5426 17.0355 25.3363 14.6667 25.3333C8.77563 25.3333 4 20.5577 4 14.6667C4 8.77563 8.77563 4 14.6667 4C20.5577 4 25.3333 8.77563 25.3333 14.6667C25.3363 17.0355 24.5426 19.3366 23.08 21.2ZM14.6667 6.66667C10.2484 6.66667 6.66667 10.2484 6.66667 14.6667C6.66667 19.0849 10.2484 22.6667 14.6667 22.6667C19.0849 22.6667 22.6667 19.0849 22.6667 14.6667C22.6667 10.2484 19.0849 6.66667 14.6667 6.66667Z" 
+                fill="white"
+            />
+        </svg>
     )
 }
