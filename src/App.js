@@ -12,19 +12,17 @@ import SearchComponent from "./components/Search";
 function App() {
 
   return (
-    <div className="text-white bg-dark-blue font-outfit md:pt-6 lg:pt-8">
+    <div className="text-white bg-dark-blue font-outfit md:py-6 lg:py-8 lg:flex">
       {/* Header section */}
-      <div className="md:mx-6">
+      <div className="md:mx-6 lg:ml-8 lg:mr-0">
         <MobileHeader />
+        <SideBar />
       </div>
-      
-      <SideBar />
 
       {/* Search Section */}
-      <div className="my-6 md:my-8 mx-4 md:mx-6">
+      <div className="my-6 md:my-8 lg:mt-[18px] px-4 md:px-6 lg:px-9 w-full">
         <SearchComponent />
-      </div>
-
+     
       {/* Routes */}
         <Routes>
           <Route index path="/" element={ <Home /> }/>      
@@ -34,6 +32,7 @@ function App() {
           <Route path="/search" element={ <Search /> }/>      
           <Route path="*" element={ <NotFound /> }/>      
         </Routes>
+      </div>
     </div>
   );
 }

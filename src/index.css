@@ -3,3 +3,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.heading-l-light {
+    @apply font-light text-xl leading-[25px] md:text-[32px] md:leading-10;
+}
+
+.heading-m-light {
+    @apply font-light text-2xl;
+}
+
+.heading-m-medium {
+    @apply font-medium text-2xl;
+}
+
+.heading-s-medium {
+    @apply font-medium text-[14px] leading-[18px] md:text-[18px] md:leading-6; /* Heading XS */
+}
+
+.description-m-light {
+    @apply font-light text-[15px];
+}
+
+.description-s-light {
+    @apply font-light text-[11px] leading-[14px] md:text-[13px] md:leading-4;
+}
