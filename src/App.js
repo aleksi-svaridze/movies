@@ -20,7 +20,7 @@ function App() {
       </div>
 
       {/* Search Section */}
-      <div className="my-6 md:my-8 lg:mt-[18px] px-4 md:px-6 lg:px-9 w-full">
+      <div className="my-6 md:my-8 lg:mt-[18px] w-full">
         <SearchComponent />
      
       {/* Routes */}

@@ -27,7 +27,7 @@ function SearchComponent() {
     };
 
   return (
-    <div className='flex items-center gap-x-4 md:gap-x-6 mb-6 md:mb-8 lg:mb-[19px]'>
+    <div className='flex items-center gap-x-4 md:gap-x-6 mb-6 md:mb-8 lg:mb-[19px] bg-dark-blue px-4 md:px-6 lg:px-9'>
         <div onClick={focusInput} className="cursor-pointer">
             {width < 768 ?   <SearchIcon /> : <SearchIconDesktop />}
         </div>

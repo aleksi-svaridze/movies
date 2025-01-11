@@ -1,0 +1,138 @@
+{
+    "movies": [
+        {
+            "id": "1",
+            "title": "The big movie",
+            "year": "1970",
+            "genre": "PG",
+            "category": "movie",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "isBookmarked": false
+        },
+        {
+            "id": "2",
+            "title": "The small movie",
+            "year": "1990",
+            "genre": "E",
+            "category": "movie",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "isBookmarked": false
+        },
+        {
+            "id": "3",
+            "title": "The long movie",
+            "year": "2010",
+            "genre": "E",
+            "category": "movie",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "isBookmarked": false
+        },
+        {
+            "id": "4",
+            "title": "The big movie",
+            "year": "1970",
+            "genre": "PG",
+            "category": "movie",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "isBookmarked": false
+        },
+        {
+            "id": "5",
+            "title": "The small movie",
+            "year": "1990",
+            "genre": "E",
+            "category": "movie",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "isBookmarked": false
+        },
+        {
+            "id": "6",
+            "title": "The long movie",
+            "year": "2010",
+            "genre": "E",
+            "category": "movie",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "isBookmarked": false
+        }
+    ],
+    "tvseries": [
+        {
+            "id": "1",
+            "title": "The big movie",
+            "year": "1970",
+            "genre": "PG",
+            "category": "tv",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1467991521834-fb8e202c7074?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHZ8ZW58MHwwfDB8fHwy",
+            "isBookmarked": false
+        },
+        {
+            "id": "2",
+            "title": "The small movie",
+            "year": "1990",
+            "genre": "E",
+            "category": "tv",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1467991521834-fb8e202c7074?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHZ8ZW58MHwwfDB8fHwy",
+            "isBookmarked": false
+        },
+        {
+            "id": "3",
+            "title": "The long movie",
+            "year": "2010",
+            "genre": "E",
+            "category": "tv",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1467991521834-fb8e202c7074?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHZ8ZW58MHwwfDB8fHwy",
+            "isBookmarked": false
+        },
+        {
+            "id": "4",
+            "title": "The big movie",
+            "year": "1970",
+            "genre": "PG",
+            "category": "tv",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1467991521834-fb8e202c7074?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHZ8ZW58MHwwfDB8fHwy",
+            "isBookmarked": false
+        },
+        {
+            "id": "5",
+            "title": "The small movie",
+            "year": "1990",
+            "genre": "E",
+            "category": "tv",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1467991521834-fb8e202c7074?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHZ8ZW58MHwwfDB8fHwy",
+            "isBookmarked": false
+        },
+        {
+            "id": "6",
+            "title": "The long movie",
+            "year": "2010",
+            "genre": "E",
+            "category": "tv",
+            "icon": "",
+            "video_url": "",
+            "image_url": "https://images.unsplash.com/photo-1467991521834-fb8e202c7074?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHZ8ZW58MHwwfDB8fHwy",
+            "isBookmarked": false
+        }
+    ]
+}
