@@ -7,12 +7,12 @@ import Bookmarked from "./pages/Bookmarked";
 import Search from './pages/Search';
 import NotFound from "./pages/NotFound";
 import SearchComponent from "./components/Search";
-// import { useWindowSize } from "@uidotdev/usehooks";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 function App() {
-
+  let {width} = useWindowSize()
   return (
-    <div className="text-white bg-dark-blue font-outfit md:py-6 lg:py-8 lg:flex">
+    <div className="text-white bg-dark-blue font-outfit md:py-6 lg:py-8 lg:flex lg:gap-x-9">
       {/* Header section */}
       <div className="md:mx-6 lg:ml-8 lg:mr-0">
         <MobileHeader />
@@ -20,7 +20,7 @@ function App() {
       </div>
 
       {/* Search Section */}
-      <div className="my-6 md:my-8 lg:mt-[18px] w-full">
+      <div className="my-6 md:my-8 lg:mt-[18px]"  style={{width: width >= 1024 ? 'calc(100% - 164px)' : '100%'}} >
         <SearchComponent />
      
       {/* Routes */}

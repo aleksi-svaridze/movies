@@ -27,3 +27,8 @@
 .description-s-light {
     @apply font-light text-[11px] leading-[14px] md:text-[13px] md:leading-4;
 }
+
+.scroll-bar::-webkit-scrollbar {
+    height: 0px;
+    background-color: red;
+}
