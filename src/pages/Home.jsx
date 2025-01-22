@@ -1,5 +1,5 @@
 import { HeadingLLight } from '../components/Typography';
-import { MovieCard, TrendingCard } from '../components/Cards';
+import { MovieCard } from '../components/Cards';
 import data from '../data/data.json';
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
       <div className='px-4 md:px-6 lg:px-9'>
         <HeadingLLight text='Trending' mb='mb-[25px]' />
       
-        <div className='rounded-l-lg flex items-center gap-x-4 md:gap-x-10 mb-10 h-[140px] md:h-[230px]'>      
+        {/* <div className='rounded-l-lg flex items-center gap-x-4 md:gap-x-10 mb-10 h-[140px] md:h-[230px]'>      
             { data && data.movies.map(movie => (
                 <TrendingCard 
                   key={movie.id} 
@@ -22,7 +22,7 @@ function Home() {
                 />
               ))  
             }
-        </div>
+        </div> */}
       </div>
 
       <div className='px-4 md:px-6 lg:px-9'>
