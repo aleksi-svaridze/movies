@@ -3,31 +3,29 @@ import { MovieCard, TrendingCard } from '../components/Cards';
 import data from '../data/data.json';
 
 function Home() {
-
   return (
     <div className=''>
 
-      <div className='pl-4 md:pl-6 lg:pl-9'>
+      <div className='px-4 md:px-6 lg:px-9'>
         <HeadingLLight text='Trending' mb='mb-[25px]' />
       
-        <div className='flex rounded-l-lg items-center gap-x-4 md:gap-x-10 mb-10 overflow-x-auto'>
-          {
-            data && data.movies.map(movie => (
-              <TrendingCard 
-                key={movie.id} 
-                id={movie.id}
-                year={movie.year}
-                category={movie.category}
-                genre={movie.genre}
-                movieTitle={movie.title}
-                src={movie.image_url}
-              />
-            ))
-          }
+        <div className='rounded-l-lg flex items-center gap-x-4 md:gap-x-10 mb-10 h-[140px] md:h-[230px]'>      
+            { data && data.movies.map(movie => (
+                <TrendingCard 
+                  key={movie.id} 
+                  id={movie.id}
+                  year={movie.year}
+                  category={movie.category}
+                  genre={movie.genre}
+                  movieTitle={movie.title}
+                  src={movie.image_url}
+                />
+              ))  
+            }
         </div>
       </div>
 
-      <div className=' px-4 md:px-6 lg:px-9'>
+      <div className='px-4 md:px-6 lg:px-9'>
         <HeadingLLight text='Recomended for you' mb='mb-[25px]' />
 
         <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-4 gap-x-[15px] md:gap-y-6 md:gap-x-7 xl:gap-y-8 xl:gap-x-10 flex-wrap'>
