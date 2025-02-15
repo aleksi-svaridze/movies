@@ -1,66 +1,81 @@
-import { HeadingLLight } from '../components/Typography';
-import { MovieCard, TrendingCard } from '../components/Cards';
-import data from '../data/data.json';
+import { HeadingLLight } from "../components/Typography";
+import { MovieCard, TrendingCard } from "../components/Cards";
+import data from "../data/data.json";
+import { useState, useEffect } from "react";
 
 function Home() {
-  return (
-    <div className=''>
+  const [trending, setTrending] = useState([]);
 
-      <div className='pl-4 md:pl-6 lg:pl-0'>
-        <HeadingLLight text='Trending' mb='mb-[25px]' />
-      
-        <div className='scroll-bar rounded-l-lg flex items-center gap-x-4 md:gap-x-10 mb-10 overflow-y-auto'
-        >
-           { data && data.movies.map(movie => (
-                <TrendingCard 
-                  key={movie.id} 
+  useEffect(() => {
+    getTrendingMovies();
+  }, []);
+
+  const getTrendingMovies = async () => {
+    try {
+      fetch(
+        "https://api.themoviedb.org/3/trending/all/week?api_key=68e01138389d4ea2cf35ca5ca585f56c"
+      )
+        .then((res) => res.json())
+        .then((data) => setTrending(data.results));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return (
+    <div className="">
+      <div className="pl-4 md:pl-6 lg:pl-0">
+        <HeadingLLight text="Trending" mb="mb-[25px]" />
+
+        <div className="scroll-bar rounded-l-lg flex items-center gap-x-4 md:gap-x-10 mb-10 overflow-y-auto overflow-x-auto">
+          {trending
+            ? trending.map((movie) => (
+                <TrendingCard
+                  key={movie.id}
                   id={movie.id}
-                  year={movie.year}
-                  category={movie.category}
+                  year={movie.release_date}
+                  category={movie.media_type}
                   genre={movie.genre}
                   movieTitle={movie.title}
-                  src={movie.image_url}
+                  src={movie.backdrop_path}
                 />
-              ))  
-            }
+              ))
+            : "No Movies"}
         </div>
       </div>
 
-      <div className='px-4 md:px-6 lg:pl-0 lg:pr-9'>
-        <HeadingLLight text='Recomended for you' mb='mb-[25px]' />
+      <div className="px-4 md:px-6 lg:pl-0 lg:pr-9">
+        <HeadingLLight text="Recomended for you" mb="mb-[25px]" />
 
-        <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-4 gap-x-[15px] md:gap-y-6 md:gap-x-7 xl:gap-y-8 xl:gap-x-10 flex-wrap'>
-          {
-            data && data.movies.map(movie => (
-              <MovieCard 
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-4 gap-x-[15px] md:gap-y-6 md:gap-x-7 xl:gap-y-8 xl:gap-x-10 flex-wrap">
+          {data &&
+            data.movies.map((movie) => (
+              <MovieCard
                 key={movie.id}
                 id={movie.id}
-                year={movie.year} 
-                category={movie.category} 
-                genre={movie.genre} 
-                movieTitle={movie.title} 
-                src={movie.image_url} 
+                year={movie.year}
+                category={movie.category}
+                genre={movie.genre}
+                movieTitle={movie.title}
+                src={movie.image_url}
               />
-            ))
-          }
-          {
-            data && data.tvseries.map(tv => (
-              <MovieCard 
+            ))}
+          {data &&
+            data.tvseries.map((tv) => (
+              <MovieCard
                 key={tv.id}
                 id={tv.id}
-                year={tv.year} 
-                category={tv.category} 
-                genre={tv.genre} 
-                movieTitle={tv.title} 
-                src={tv.image_url} 
+                year={tv.year}
+                category={tv.category}
+                genre={tv.genre}
+                movieTitle={tv.title}
+                src={tv.image_url}
               />
-            ))
-          }
+            ))}
         </div>
       </div>
-
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
