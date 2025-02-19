@@ -8,6 +8,7 @@ import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 import SearchComponent from "./components/SearchInput";
 import { useWindowSize } from "@uidotdev/usehooks";
+import SingleMovie from "./pages/SingleMovie";
 
 function App() {
   let { width } = useWindowSize();
@@ -23,7 +24,9 @@ function App() {
         {/* Routes */}
         <Routes>
           <Route index path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies" element={<Movies />}>
+            <Route path="/movies/:id" element={<SingleMovie />} />
+          </Route>
           <Route path="/tvseries" element={<TvSeries />} />
           <Route path="/bookmarked" element={<Bookmarked />} />
           <Route path="/search" element={<Search />} />
