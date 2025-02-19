@@ -8,14 +8,18 @@ export const MovieCard = ({ year, category, genre, movieTitle, src, id }) => {
         <BookmarkIcon />
       </span>
 
-      <img className="rounded-lg w-full" src={src} alt={movieTitle} />
+      <img
+        className="rounded-lg w-full"
+        src={`https://image.tmdb.org/t/p/w300/${src}`}
+        alt={movieTitle}
+      />
 
       <figcaption className="flex items-center gap-x-2 mt-2 mb-1 description-s-light opacity-75">
         <span>{year}</span>
         <span className="size-[3px] opacity-50 rounded-full bg-white"></span>
         <span className="capitalize">{category}</span>
         <span className="size-[3px] opacity-50 rounded-full bg-white"></span>
-        <span>{genre}</span>
+        <span>{genre}PG</span>
       </figcaption>
 
       <Link to={`/movies/${id}`} className="heading-s-medium capitalize">
@@ -53,7 +57,7 @@ export const TrendingCard = ({
             {category}
           </span>
           <span className="size-[3px] opacity-50 rounded-full bg-white"></span>
-          <span>{genre}</span>
+          <span>{genre}PG</span>
         </div>
         <Link to={`/movies/${id}`} className="heading-s-medium capitalize">
           {movieTitle}

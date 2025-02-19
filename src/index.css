@@ -29,6 +29,6 @@
 }
 
 .scroll-bar::-webkit-scrollbar {
-  height: 10px;
-  background-color: transparent;
+  height: 0px;
+  background-color: red;
 }

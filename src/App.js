@@ -1,4 +1,4 @@
-import { SideBar, MobileHeader } from "./components/Headers";
+import SideBar from "./components/Sidebar";
 import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
@@ -13,16 +13,10 @@ function App() {
   let { width } = useWindowSize();
   return (
     <div className="text-white bg-dark-blue font-outfit md:py-6 lg:py-8 lg:flex lg:gap-x-9">
-      {/* Header section */}
-      <div className="md:mx-6 lg:ml-8 lg:mr-0">
-        <MobileHeader />
-        <SideBar />
-      </div>
-
-      {/* Search Section */}
+      <SideBar />
       <div
-        className="my-6 md:my-8 lg:mt-[18px]"
-        style={{ width: width >= 1024 ? "calc(100% - 164px)" : "100%" }}
+        className="my-6 md:my-8 lg:mt-[18px] lg:pl-24 bg-dark-blue w-full"
+        style={{ width: width >= 1024 ? "calc(100% - 68px)" : "100%" }}
       >
         <SearchComponent />
 
