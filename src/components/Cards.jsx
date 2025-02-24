@@ -37,11 +37,12 @@ export const TrendingCard = ({
   src,
   id,
 }) => {
+  console.log(src);
   //  w-[240px] md:w-[470px]
   return (
     <div
-      className="relative shrink-0 bg-center bg-cover bg-no-repeat overflow-hidden cursor-move 
-      h-[140px] md:h-[230px] 
+      className="relative shrink-0 bg-center bg-cover bg-no-repeat overflow-hidden cursor-move
+      h-[140px] md:h-[230px]
       w-full min-md:w-[470px] rounded-lg"
       style={{
         backgroundImage: `url('https://image.tmdb.org/t/p/w300/${src}')`,

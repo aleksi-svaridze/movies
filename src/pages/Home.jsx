@@ -4,6 +4,12 @@ import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import imgDesktop1 from "../assets/images/trending/1.png";
+import imgDesktop2 from "../assets/images/trending/2.png";
+import imgDesktop3 from "../assets/images/trending/3.png";
+import imgDesktop4 from "../assets/images/trending/4.png";
+import imgDesktop5 from "../assets/images/trending/5.png";
+
 function Home() {
   const [trending, setTrending] = useState([]);
 
@@ -24,20 +30,25 @@ function Home() {
   };
 
   const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+    largeDesktop: {
+      breakpoint: { max: 1440, min: 1024 },
       items: 2,
-      partialVisibilityGutter: 255, // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 0,
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+      partialVisibilityGutter: 0,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 375 },
+      breakpoint: { max: 768, min: 587 },
       items: 1,
-      partialVisibilityGutter: 235, // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 320,
     },
     mobile: {
-      breakpoint: { max: 375, min: 0 },
+      breakpoint: { max: 587, min: 0 },
       items: 1,
-      partialVisibilityGutter: 235, // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 100,
     },
   };
 
@@ -48,23 +59,30 @@ function Home() {
 
         {/* <div className="scroll-bar rounded-l-lg flex items-center gap-x-4 md:gap-x-10 mb-10 overflow-y-hidden"> */}
         <Carousel
+          containerClass={"bg-red"}
           sliderClass={"gap-x-4 md:gap-x-10"}
           swipeable={true}
           draggable={true}
           showDots={false}
           responsive={responsive}
           partialVisible={true}
+          // infinite={true}
           removeArrowOnDeviceType={[
-            "superLargeDesktop",
+            "largeDesktop",
             "desktop",
             "tablet",
             "mobile",
           ]}
-          autoPlay={true}
-          customTransition="all 2s ease-in-out"
-          autoPlaySpeed={4000}
+          autoPlay={false}
+          // customTransition="all 2s ease-in-out"
+          // autoPlaySpeed={4000}
         >
-          {trending
+          <img src={imgDesktop1} className="h-full min-h-[140px]" alt="" />
+          <img src={imgDesktop2} className="h-full min-h-[140px]" alt="" />
+          <img src={imgDesktop3} className="h-full min-h-[140px]" alt="" />
+          <img src={imgDesktop4} className="h-full min-h-[140px]" alt="" />
+          <img src={imgDesktop5} className="h-full min-h-[140px]" alt="" />
+          {/* {trending
             ? trending.map((movie) => (
                 <TrendingCard
                   key={movie.id}
@@ -76,7 +94,7 @@ function Home() {
                   src={movie.backdrop_path}
                 />
               ))
-            : "No Movies"}
+            : "No Movies"} */}
         </Carousel>
         {/* </div> */}
       </div>
