@@ -9,9 +9,17 @@ import NotFound from "./pages/NotFound";
 import SearchComponent from "./components/SearchInput";
 import { useWindowSize } from "@uidotdev/usehooks";
 import SingleMovie from "./pages/SingleMovie";
+import { useState } from "react";
 
 function App() {
+  const [bookmarkedMovies, setBookmarkedMovies] = useState([]);
+  const [bookmarkedTvSeries, setBookmarkedTvSeries] = useState([]);
+
+  const setMoviesToFavoriteList = (id) => {
+    console.log(id);
+  };
   let { width } = useWindowSize();
+
   return (
     <div className="text-white bg-dark-blue font-outfit md:py-6 lg:py-8 lg:flex lg:gap-x-9">
       <SideBar />
@@ -23,7 +31,16 @@ function App() {
 
         {/* Routes */}
         <Routes>
-          <Route index path="/" element={<Home />} />
+          <Route
+            index
+            path="/"
+            element={
+              <Home
+                setMoviesToFavoriteList={setMoviesToFavoriteList}
+                bookmarkedMovies={bookmarkedMovies}
+              />
+            }
+          />
           <Route path="/movies" element={<Movies />}>
             <Route path="/movies/:id" element={<SingleMovie />} />
           </Route>

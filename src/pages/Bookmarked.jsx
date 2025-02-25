@@ -8,18 +8,18 @@ function Bookmarked() {
       <HeadingLLight text="Bookmarked Movies" mb="mb-[25px]" />
 
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-4 gap-x-[15px] md:gap-y-6 md:gap-x-7 xl:gap-y-8 xl:gap-x-10 flex-wrap mb-10">
-        {data &&
-          data.movies.map((movie) => (
+        {/* {bookmarkedMovies &&
+          bookmarkedMovies.map((movie) => (
             <MovieCard
               key={movie.id}
               id={movie.id}
-              year={movie.year}
-              category={movie.category}
+              year={movie.release_date}
+              category={movie.media_type}
               genre={movie.genre}
               movieTitle={movie.title}
-              src={movie.image_url}
+              src={movie.backdrop_path}
             />
-          ))}
+          ))} */}
       </div>
 
       <HeadingLLight text="Bookmarked TV Series" mb="mb-[25px]" />
